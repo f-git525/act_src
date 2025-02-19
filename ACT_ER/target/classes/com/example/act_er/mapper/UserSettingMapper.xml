@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.act_er.mapper.UserSettingMapper">
+
+    <select id="selectAll">
+        SELECT * FROM act_er.act_employee_list
+    </select>
+
+    <select id="selectTeam" resultType="List">
+        SELECT employee_team_id,employee_team_name
+        FROM act_er.act_team_master
+        WHERE delete_flag != 1
+    </select>
+
+    <select id="userSelect" resultType="List">
+        SELECT
+            *
+        FROM
+            ActEmployeeList
+        <where>
+            <if test="userName != null">
+                AND employee_kana = #{userName}
+            </if>
+            <if test="UserSettingForm.employeeTeamId != null">
+                AND employee_Team_id = #{employeeTeamId}
+            </if>
+            <!-- FROMのみで検索 -->
+            <if test="yearSearchValue == 1">
+                AND employee_start_date = #{employeeStartDate}
+            </if>
+            <!-- TOのみで検索 --> ,
+            <if test="yearSearchValue == 2">
+                AND employee_start_date = #{employeeStartDate}
+            </if>
+            <!-- FROMとTOで検索 -->
+            <if test="yearSearchValue == 3">
+                AND employee_start_date = #{employeeStartDate}
+            </if>
+        </where>
+    </select>
+
+</mapper>
