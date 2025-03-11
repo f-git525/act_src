@@ -1,0 +1,169 @@
+html {
+	margin-left:20;
+}
+
+p{
+font-size:24px;
+margin: 1px;
+}
+select{
+	font-size:20px
+}
+.select_style{
+	font-size:20px
+}
+.title_area {
+	color: white;
+	background: #3939ff;
+   font-size: 20px;
+	padding: 10px 30px;
+	width:100px;
+}
+
+.serch_area {
+	position: relative;
+	top: 10%;
+	font-size: 20px;
+}
+
+.description_area {
+    position: relative;
+    top: 40;
+    margin-top:50;
+    font-size: 20px;
+
+
+}
+
+thead tr th{
+	border: solid 0.5px black;
+	border-collapse: collapse;
+	color: #ffffff;
+	position: relative;
+	background: #3939ff;
+   font-size: 20px;
+	width: 150px;
+}
+
+.table_style1{
+	border: solid 0.5px black;
+	border-collapse: collapse;
+	position: relative;
+}
+
+.radio{
+	border: solid 0.5px black;
+	width:0.1px;
+}
+
+#none {
+    width: 20px;
+}
+
+.serch_button {
+	border-radius: 5px;
+	box-shadow: 0 2px #bbb;
+	border-width: 0.1;
+	background: #369a36d9;
+	color: white;
+	left: 740;
+	position: relative;
+	top: 5;
+	transition: .2s;
+	font-size: 20px;
+}
+
+.serch_button:hover {
+	cursor: pointer;
+}
+
+.serch_button:active {
+	background: #515151;
+	box-shadow: 0 0px #bbb;
+	transform: translateY(2px);
+}
+
+.back_button {
+	background: #838383;
+	border-width: 0.1;
+	box-shadow: 0 2px #838383;
+	border-radius: 5px;
+	color: white;
+	position: relative;
+	top: 80;
+	transition: .2s;
+	font-size: 20px;
+}
+
+.back_button:hover {
+	cursor: pointer;
+}
+
+.back_button:active {
+	background: #515151;
+	box-shadow: 0 0px #bbb;
+	transform: translateY(2px);
+}
+
+.judge_button {
+	background: #369a36d9;
+	border-width: 0.1;
+	border-radius: 5px;
+	box-shadow: 0 2px #bbb;
+	color: white;
+	position: relative;
+	left: 740;
+	top: 25;
+	transition: .2s;
+	font-size: 20px;
+
+
+}
+.judge_button:hover {
+	cursor: pointer;
+}
+
+.judge_button:active {
+	background: #515151;
+	box-shadow: 0 0px #bbb;
+	transform: translateY(2px);
+}
+
+.result_title p{
+  font-size: 28px;
+}
+#item{
+   width : 100px;
+   font-size: 20px;
+   color: white;
+   background-color : #3939ff;
+
+}
+#Judg_result{
+   font-size: 20px;
+   border: solid 0.5px black;
+   border-collapse:collapse;
+}
+#Judg_result_2{
+   font-size: 20px;
+   border:  none;
+}
+#result_detail_info{
+	width: 600px;
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+.result_detail p{
+	display: inline;
+	margin:0px;
+    font-size: 22px;
+}
+.result_detail th{
+	border: 1px solid black;
+	font-size: 20px;
+    color: white;
+    background-color : #3939ff;
+}
+.result_detail td{
+	border: 1px solid black;
+}
