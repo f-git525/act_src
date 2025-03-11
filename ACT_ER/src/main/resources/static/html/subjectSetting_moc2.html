@@ -7,11 +7,15 @@
 <meta name="description" content="ディスクリプションを入力">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet"
-	href="C:\Users\yu-kudo\eclipse-workspace\ACT_ER\src\main\resources\css\style.css">
+	href="C:\Users\yu-fujii\git\act_src\ACT_ER\act_src\ACT_ER\src\main\resources\static\css\style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="C:\Users\yu-kudo\eclipse-workspace\ACT_ER\src\main\resources\js\main.js"></script>
+<script src="C:\Users\yu-fujii\git\act_src\ACT_ER\act_src\ACT_ER\src\main\resources\static\js\main.js"></script>
+
 </head>
+
 <body>
+
+
 	<!----- header----->
 	<div class ="userTitle">
 	<h2>対象者設定画面</h2>
@@ -54,10 +58,45 @@
 				</select> 年</td>
 			</tr>
 		</table>
-		</table>
 		<input type="button" value="検索" class="serch_button" />
 	</div>
-
+<!-- モーダル -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <img src="C:\Users\yu-fujii\git\act_src\ACT_ER\act_src\ACT_ER\src\main\resources\static\img\modalLogo.png" alt="ロゴ" class="logo">
+        <table class="modal-table">
+            <tr>
+                <th> 詳細情報</th>
+                <th> 内容</th>
+            </tr>
+            <tr>
+                <td>名前</td>
+                <td id="modalName"></td>
+            </tr>
+            <tr>
+                <td>日付</td>
+                <td id="modalDate"></td>
+            </tr>
+            <tr>
+                <td>年齢</td>
+                <td id="modalAgeText"></td>
+            </tr>
+            <tr>
+                <td>チーム</td>
+                <td id="modalTeamText"></td>
+            </tr>
+            <tr>
+                <td>ポジション</td>
+                <td id="modalPositionText"></td>
+            </tr>
+            <tr>
+                <td>趣味</td>
+                <td id="modalHobbyText"></td>
+            </tr>
+        </table>
+    </div>
+</div>
 	<div class="description_area">
 		<p>詳細情報</p>
 		<table class="a_table"cellspacing="0">
@@ -71,48 +110,26 @@
 					<th class="table_style1" >役職</th>
 				</tr>
 		</thead>
-				<tbody>
-				<tr align="center">
-					<td class="radio" ><input type="radio" name="peple" value="1" />
-					<td class="table_style1">田中太郎</td>
-					<td class="table_style1">2024年1月10日</td>
-					<td class="table_style1">20歳</td>
-					<td class="table_style1">フレキシブル</td>
-					<td class="table_style1"></td>
-				</tr>
-				<tr align="center">
-					<td class="radio"><input type="radio" name="peple" value="2" />
-					<td class="table_style1">田中次郎</td>
-					<td class="table_style1">2024年1月10日</td>
-					<td class="table_style1">20歳</td>
-					<td class="table_style1">フレキシブル</td>
-					<td class="table_style1">リーダー</td>
-				</tr>
-								<tr align="center">
-					<td class="radio"><input type="radio" name="peple" value="2" />
-					<td class="table_style1">田中次郎</td>
-					<td class="table_style1">2024年1月10日</td>
-					<td class="table_style1">20歳</td>
-					<td class="table_style1">フレキシブル</td>
-					<td class="table_style1">リーダー</td>
-				</tr>
-								<tr align="center">
-					<td class="radio"><input type="radio" name="peple" value="2" />
-					<td class="table_style1">田中次郎</td>
-					<td class="table_style1">2024年1月10日</td>
-					<td class="table_style1">20歳</td>
-					<td class="table_style1">フレキシブル</td>
-					<td class="table_style1">リーダー</td>
-				</tr>
-								<tr align="center">
-					<td class="radio"><input type="radio" name="peple" value="2" />
-					<td class="table_style1">田中次郎</td>
-					<td class="table_style1">2024年1月10日</td>
-					<td class="table_style1">20歳</td>
-					<td class="table_style1">フレキシブル</td>
-					<td class="table_style1">リーダー</td>
-				</tr>
-			</tbody>
+    <tbody>
+        <tr align="center">
+            <td class="radio"><input type="radio" name="people" value="1" /></td>
+            <td class="table_style1"><a href="#" class="modalLink">田中太郎</a></td>
+            <td class="table_style1">2024年1月10日</td>
+            <td class="table_style1">20歳</td>
+            <td class="table_style1">フレキシブル</td>
+            <td class="table_style1"></td>
+            <td class="table_style1 hidden">野球</td>
+        </tr>
+        <tr align="center">
+            <td class="radio"><input type="radio" name="people" value="2" /></td>
+            <td class="table_style1"><a href="#" class="modalLink">松本潤</a></td>
+            <td class="table_style1">2023年1月10日</td>
+            <td class="table_style1">40歳</td>
+            <td class="table_style1">嵐</td>
+            <td class="table_style1">歌手</td>
+            <td class="table_style1 hidden">歌</td>
+        </tr>
+    </tbody>
 		</table>
 		<input type="button" value="判定" class="judge_button" disabled />
 	</div>
