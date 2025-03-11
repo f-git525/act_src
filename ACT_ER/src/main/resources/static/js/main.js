@@ -23,12 +23,13 @@ window.onload = function() {
     for (var i = 0; i < links.length; i++) {
         links[i].onclick = function() {
             var row = this.parentNode.parentNode; // リンクの親要素の行を取得
-            document.getElementById("modalName").innerText = this.innerText;
-            document.getElementById("modalDate").innerText = row.cells[2].innerText;
-            document.getElementById("modalAgeText").innerText = row.cells[3].innerText;
-            document.getElementById("modalTeamText").innerText = row.cells[4].innerText;
-            document.getElementById("modalPositionText").innerText = row.cells[5].innerText;
-            document.getElementById("modalHobbyText").innerText = row.cells[6].innerText;
+            document.getElementById("modalName").innerHTML = this.innerHTML;
+            document.getElementById("modalDate").innerHTML = row.cells[2].innerHTML;
+            document.getElementById("modalAgeText").innerHTML = row.cells[3].innerHTML;
+            document.getElementById("modalTeamText").innerHTML = row.cells[4].innerHTML;
+            document.getElementById("modalPositionText").innerHTML = row.cells[5].innerHTML;
+            document.getElementById("modalHobbyText").innerHTML = row.cells[6].innerHTML;
+            document.getElementById("modalBikou").innerHTML = row.cells[7].innerHTML;
             modal.style.display = "block";
             document.body.classList.add("modal-open");
             return false;
