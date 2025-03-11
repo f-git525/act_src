@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ACT上下関係判定システム</title>
+<link href="../css/ebi_style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<h1 th:text="${screenName}"></h1>
@@ -11,12 +12,17 @@
 
 	<form th:action="@{/userSetting/search}" th:object="${userSettingForm}" method="post">
 		<label for="userName">利用者氏名：</label>
-		<input type="text" th:field="*{userName}" "${userName}"><br>
+		<input type="text" th:field="*{userName}"><br>
+
 		<label for="teamName">所属チーム名：</label>
-		<input type="text" th:field="*{teamName}"><br>
+		<select class="dropdown form-control" th:field="*{teamName}">
+			<option th:each="team : ${allTeamMap}" th:value="${team.key}" th:text="${team.value}"></option>
+		</select>
+
 		<label for="EmploymentYears">在籍年数：</label>
-		<input type="number" list="" th:field="*{fromEmploymentYears}"> 年 ～
-		<input type="number" list="" th:field="*{toEmploymentYears}"> 年<br>
+		<input type="number" list="" th:field="*{fromEmploymentYears}" min="0" max="100"> 年 ～
+		<input type="number" list="" th:field="*{toEmploymentYears}" min="0" max="100"> 年<br>
+
 		<button>検索</button>
 	</form>
 
