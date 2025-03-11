@@ -167,3 +167,94 @@ thead tr th{
 .result_detail td{
 	border: 1px solid black;
 }
+
+/*モーダルスタイル*/
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 10%;
+	top: 0;
+	width: 80%;
+	height: 100%;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+.modal-content {
+	background-color: #ffffff;
+	color: #000;
+	margin: 15% auto;
+	padding: 20px;
+	border: none;
+	width: 300px;
+	height: auto;
+	max-height: 80%;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	overflow-y: auto;
+	animation: slideup 1.0s;
+}
+
+.close {
+	color: #000;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@keyframes slideup {
+	from {transform: translatey(50px);
+} /* 下から上にスライド */
+to {
+	transform: translatey(0);
+}
+
+}
+body.modal-open {
+	overflow: hidden;
+}
+
+.hidden {
+	display: none;
+}
+
+.modal-table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.modal-table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+.modal-table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.modal-table tr:hover {
+	background-color: #ddd;
+}
+
+.modal-table th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #0080ff;
+	color: white;
+	text-indent: 0.5em;
+}
+
+.logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
