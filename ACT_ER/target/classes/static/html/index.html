@@ -1,0 +1,59 @@
+<!DOCTYPE html unspecified PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>判定結果画面</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class = 'result_title'>
+    <p><b>判定結果画面</b></p>
+  </div>
+    <table id = 'Judg_result'>
+      <tbody>
+        <tr>
+          <td id = 'item'>社歴</td>
+          <td id = 'Judg_result_2'>あなたのほうが上です。1。</td>
+        </tr>
+        <tr>
+          <td id = 'item'>年齢</td>
+          <td id = 'Judg_result_2'>あなたのほうが上です。</td>
+        </tr>
+        <tr>
+          <td id = 'item'>役職</td>
+          <td id = 'Judg_result_2'>あなたのほうが上です。</td>
+        </tr>
+      </tbody>
+    </table>
+  <br>
+   <div class = 'result_detail'>
+     <p>詳細情報</p>
+     <table   id = 'result_detail_info'>
+       <thead>
+         <tr>
+         <th>名前</th>
+         <th>入社年月日</th>
+         <th>年齢</th>
+         <th>所属チーム</th>
+         <th>役職</th>
+         </tr>
+       </thead>
+       <tbody align = center>
+　　　　　　　<tr>
+　　　　　　　<td>田中太郎</td>
+　　　　　　　<td>2024/01/23</td>
+　　　　　　　<td>26歳</td>
+　　　　　　　<td>フレキシブル</td>
+　　　　　　　<td>一般</td>
+　　　　　　　</tr>
+　　　　　　</tbody>
+     </table>
+   </div>
+   <br>
+   <form th:action="@{/move}" method="post" >
+        <p class="formbottom">
+            <input type="submit" value="戻る" class="btns submit">
+        </p>
+    </form>
+</body>
+</html>

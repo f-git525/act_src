@@ -1,12 +1,10 @@
-@charset "UTF-8";
-
 html {
 	margin-left:20;
-
 }
 
 p{
-font-size:24px
+font-size:24px;
+margin: 1px;
 }
 select{
 	font-size:20px
@@ -56,9 +54,6 @@ thead tr th{
 .radio{
 	border: solid 0.5px black;
 	width:0.1px;
-}
-p {
-	margin: 1px;
 }
 
 #none {
@@ -122,12 +117,6 @@ p {
 	transition: .2s;
 	font-size: 20px;
 
-	&:disabled {
-	background-color : #ccc; /* グレーの背景色 */
-	color: #888; /* グレーのテキスト色 */
-	cursor: not-allowed; /* カーソルを「禁止」アイコンに変更 */
-	pointer-events: none;
-	}
 
 }
 .judge_button:hover {
@@ -138,4 +127,43 @@ p {
 	background: #515151;
 	box-shadow: 0 0px #bbb;
 	transform: translateY(2px);
+}
+
+.result_title p{
+  font-size: 28px;
+}
+#item{
+   width : 100px;
+   font-size: 20px;
+   color: white;
+   background-color : #3939ff;
+
+}
+#Judg_result{
+   font-size: 20px;
+   border: solid 0.5px black;
+   border-collapse:collapse;
+}
+#Judg_result_2{
+   font-size: 20px;
+   border:  none;
+}
+#result_detail_info{
+	width: 600px;
+	border: 1px solid black;
+	border-collapse:collapse;
+}
+.result_detail p{
+	display: inline;
+	margin:0px;
+    font-size: 22px;
+}
+.result_detail th{
+	border: 1px solid black;
+	font-size: 20px;
+    color: white;
+    background-color : #3939ff;
+}
+.result_detail td{
+	border: 1px solid black;
 }
