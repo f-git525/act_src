@@ -60,11 +60,9 @@ public class TargetSettingController {
 		  mav.setViewName("targetSetting");
 
 		//オブジェクトに値を設定
-		  mav.addObject("targetUserName", targetSettingForm.getEmployeeName());
-		  mav.addObject("targetStart", targetSettingForm.getEmployeeStart());
-		  mav.addObject("targetAge", targetSettingForm.getEmployeeAge());
-		  mav.addObject("targetTeamName", targetSettingForm.getTeamID());
-		  mav.addObject("targetPositionID", targetSettingForm.getPositionID());
+		  mav.addObject("targetUserName", targetSettingForm.getTargetName());
+		  mav.addObject("targetTeamName", targetSettingForm.getTeamName());
+		  mav.addObject("employeeData", targetSettingForm.getSearchResultList());
 
 		return mav;
 

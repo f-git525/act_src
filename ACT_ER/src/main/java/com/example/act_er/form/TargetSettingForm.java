@@ -1,51 +1,31 @@
 package com.example.act_er.form;
 
+import java.util.List;
+
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 @Data
 public class TargetSettingForm {
 
-	/** 社員ID */
-	@Getter
-	@Setter
-	private int employeeID;
 
-	/** 名前*/
-	@Getter
-	@Setter
-	private String employeeName;
+	/** 対象者名*/
+	private String targetName;
 
-	/** 名前カナ*/
-	@Getter
-	@Setter
-	private String employeeNameKana;
+	/** 利用者名*/
+	private String userName;
 
-	/** 入社日*/
-	@Getter
-	@Setter
-	private String employeeStart;
+	/** チーム名*/
+	private int teamName;
 
-	/** 年齢*/
-	@Getter
-	@Setter
-	private int employeeAge;
+	private Integer fromEmploymentYears;
 
-	/** チームID*/
-	@Getter
-	@Setter
-	private int teamID;
+	private Integer toEmploymentYears;
 
-	/** 役職ID*/
-	@Getter
-	@Setter
-	private int positionID;
+	/** 検索結果*/
+	private List<String> searchResultList;
 
-	/** チーム削除フラグ*/
-	@Getter
-	@Setter
-	private int deleteFlog;
+	/** エラーメッセージ*/
+	private List<String> errorMessage;
 
 
 

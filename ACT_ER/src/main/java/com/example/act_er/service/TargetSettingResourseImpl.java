@@ -22,7 +22,7 @@ public class TargetSettingResourseImpl implements TargetSettingResourse {
 	public List<ActEmployeeList> targetSerch(@Param("targetSettingForm") TargetSettingForm targetSettingForm,
 			@Param("yearSearchValue") String yearSearchValue) {
 
-		targetSettingForm.getEmployeeName();
+		targetSettingForm.getTargetName();
 
 		return mapper.select();
 		//return mapper.userSelect(userSettingForm, "");
